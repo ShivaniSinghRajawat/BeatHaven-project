@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeatHaven</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Sidebar -->
+
+            <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar" style=" 
+                padding: 5px 10px;
+                  display: left;
+                  justify-content: space-between;
+                  align-items: left;
+                  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                  z-index: 1;">
+                <div class="logo ">
+                    <img src="/static/images/2/x2.png" alt="logo" style="width: 285px;
+                                                                            height: 350px;
+                                                                            margin-top: -45%;
+                                                                            margin-left: -10%;">
+                    
+                  </div>
+                  <div class="position-sticky pt-3">
+                    
+                    <ul class="nav flex-column" style="margin-top: -60%;
+                                                         margin-left: -5%;
+                                                         font-size: 18px;">    
+                        <li class="nav-item">
+                            <a class="nav-link" href="/templates/home.html">
+                                <i class="fas fa-home"></i> About us
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#search">
+                                <i class="fas fa-search"></i> Search
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-book"></i> Your Library
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-user"></i> Profile
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <button class="btn btn-outline-primary w-100 " style="margin-top: 100%;">
+                        <i class="fas fa-plus"></i> + Create Playlist
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+               
+<header class="py-3 mb-4 border-bottom">
+    <div class="container-fluid d-flex align-items-center">
+        <form id="search" class="w-100 me-3">
+            <input type="search" class="form-control" placeholder="Search for songs, artists, or albums">
+        </form>
+        <div class="flex-shrink-0">
+            <a href="https://google.com" class="link-dark text-decoration-none">Contact Us</a>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+
+<div id="heroCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+                <img src="/static/images/1/l1.jpg" class="d-block w-100" alt="New Release">
+                <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.15);"">
+                    <h2>New Release</h2>
+                    <p>Listen to the hottest tracks</p>
+                    <button class="btn btn-light">Listen Now</button>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/static/images/2/f.jpg" class="d-block w-100" alt="Featured Artist">
+            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.15);
+                                                                   "">
+                <h2>Featured Artist</h2>
+                <p>Discover their latest album</p>
+                <button class="btn btn-light">Listen Now</button>
+           
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/static/images/2/l6.jpg" class="d-block w-100" alt="Trending Playlist">
+            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.15);"">
+                <h2>Trending Playlist</h2>
+                <p>Top charts this week</p>
+                <button class="btn btn-light">Listen Now</button>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="container-fluid">
+    <!-- Recently Played Section -->
+    <section class="mb-4">
+        <h2 class="mb-3">Recently Played</h2>
+        <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-4 carousel slide mb-4" id="recentlyPlayedCarousel" data-bs-ride="carousel"">
+            {% for song in recently_played %}
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/200?text=Album+{{ song.id.split('-')[1] }}" class="card-img-top" alt="{{ song.album }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ song.title }}</h5>
+                        <p class="card-text">{{ song.artist }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Your Playlists Section -->
+    <section class="mb-4">
+        <h2 class="mb-3">Your Playlists</h2>
+        <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-4">
+            {% for playlist in playlists %}
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/200?text=Playlist+{{ playlist.id.split('-')[1] }}" class="card-img-top" alt="{{ playlist.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ playlist.name }}</h5>
+                        <p class="card-text">{{ playlist.song_count }} songs</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Leaderboard Section -->
+    <section class="mb-4">
+        <h2 class="mb-3">Leaderboard</h2>
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for entry in leaderboard %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ entry.name }}</td>
+                            <td>{{ entry.score }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer / Music Player -->
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://3aaca219-692e-4356-9be1-72a47dc0effa-00-2bmwn0crc3l52.picard.replit.dev/static/script.js"></script>
+</body>
+</html>

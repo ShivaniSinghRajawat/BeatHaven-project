@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeatHaven - Music Streaming</title>
+    /* General styling */
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .login-btn {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 100px;
+        background-color: #333;
+        color: #fff;
+    }
+
+    .hero-content {
+        max-width: 50%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        margin: 20px 0;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .explore-btn, .signup-btn {
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .explore-btn {
+        background-color: #ff66b2;
+        color: #fff;
+    }
+
+    .signup-btn {
+        background-color: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+    }
+
+    .section {
+        padding: 50px 100px;
+        background-color: #fff;
+    }
+
+    .section h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .section p {
+        margin-bottom: 40px;
+    }
+
+    .content {
+        display: flex;
+        gap: 40px;
+    }
+
+    .cards {
+        display: flex;
+        gap: 20px;
+    }
+
+    .card {
+        background-color: #f9f9f9;
+        padding: 20px;
+        text-align: center;
+        flex-grow: 1;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: #fff;
+    }
+        </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Zepa</div>
+        <nav>
+            <ul>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="login-btn">Login</button>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Your Perfect Soundtrack with BeatHaven</h1>
+            <p>Personalize your music experience with our innovative music matching algorithm.</p>
+            <div class="buttons">
+                <button class="explore-btn">Explore Now</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+        </div>
+        <img src="{{ url_for('static', filename='images/placeholder.png') }}" alt="Hero Image">
+    </section>
+
+    <section class="section">
+        <h2>Discover Your Perfect Soundtrack</h2>
+        <p>Our Innovative Music Matching Algorithm</p>
+        <div class="content">
+            <div class="text">
+                <h3>Personalized Experience</h3>
+                <p>Get song recommendations based on your preferences.</p>
+            </div>
+            <div class="text">
+                <h3>Endless Discovery</h3>
+                <p>Explore new genres and artists tailored to your taste.</p>
+            </div>
+            <img src="{{ url_for('static', filename='images/placeholder.png') }}" alt="Music Image">
+        </div>
+    </section>
+
+    <section class="section quiz">
+        <h2>Our Personalized Music Quiz</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/placeholder.png') }}" alt="Image 1">
+                <h3>Experience "Island Vibes"</h3>
+                <p>Get into a tropical mood with our curated playlist.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/placeholder.png') }}" alt="Image 2">
+                <h3>Unlock a World of Music That Speaks to You</h3>
+                <p>Discover new sounds that match your unique tastes.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/placeholder.png') }}" alt="Image 3">
+                <h3>Join a Community of Music Lovers</h3>
+                <p>Share your favorite tracks and discover new ones.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Zepa. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
