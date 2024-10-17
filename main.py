@@ -19,12 +19,12 @@ leaderboard = [
     {"id": "3", "name": "User3", "score": 750},
 ]
 
-@app.route('/templates/home.html')
+@app.route('/')
 def hello_world():
     return render_template('home.html'
                         )
 
-@app.route('/templates/base.html')
+@app.route('/DiscoverMore')
 def ello():
     return render_template('base.html',
                           recently_played=recently_played, 
@@ -35,7 +35,7 @@ def ello():
 def hello():
     return render_template('about.html')
 
-@app.route('/contact_us')
+@app.route('/contactus')
 def hell():
     return render_template('contact us.html')
 
