@@ -5,6 +5,7 @@ body {
 .sidebar {
   height: 100vh;
   width: 18.1%;
+  color: blue;
   position: fixed;
   top: 0;
   left: 0;
@@ -18,8 +19,12 @@ body {
   color: #333;
 }
 
+.sidebar .nav-item .nav-link a:hover{
+  color: blue;
+}
+
 .sidebar.nav-link.active {
-  color: #007bff;
+  color: blue;
 }
 
 .carousel-item img {
