@@ -15,6 +15,11 @@ from spotify_utils import search_tracks, get_audio_features, get_user_top_tracks
 import requests
 
 app = Flask(__name__)
+app.config.from_object(Config)
+db.init_app(app)
+migrate = Migrate(app, db)
+CORS(app)
+login_manager = LoginManager(app)
 
 
 recently_played = [
