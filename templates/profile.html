@@ -1,12 +1,84 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title> BeatHaven</title>
-  </head>
-  <body>
-<h1>profile</h1>
-     <link rel="stylesheet" href="style.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+   <link rel="stylesheet" href="/static/p_style.css">
+</head>
+<body>
+  
+ 
     
+    <!-- Profile Header -->
+    <header class="profile-header">
+        <div class="container">
+            <div class="profile-picture">
+                <img src="/static/images/2/g1.jpg" alt="Profile Picture">
+            </div>
+            <div class="profile-details">
+                <h1 class="profile-name">John Doe</h1>
+                <p class="profile-bio">Music enthusiast. Lover of alternative rock and chill beats. Always exploring new genres!</p>
+                <div class="profile-actions">
+                    <button class="edit-btn">
+                      Edit Profile</button>
+                    <button class="logout-btn">
+                      <a href="/" style="color:black">Logout</a></button>
+                </div>
+            </div>
+        
+    </header>
 
-  </body>
+    <!-- Favorite Genres Section -->
+    <section class="favorite-genres">
+        <div class="container">
+            <h2>Your Favorite Genres</h2>
+            <ul>
+                <li>Alternative Rock</li>
+                <li>Lo-fi Beats</li>
+                <li>Indie Pop</li>
+                <li>Jazz</li>
+                <li>Classical</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Playlists Section -->
+    <section class="playlists">
+        <div class="container">
+            <h2>Your Playlists</h2>
+            <div class="playlist-grid">
+                <div class="playlist">
+                    <img src="/static/images/2/l2.jpg" alt="Playlist Cover">
+                    <h3>Chill Vibes</h3>
+                    <p>50 Songs</p>
+                </div>
+                <div class="playlist">
+                    <img src="/static/images/1/Record.jpg" alt="Playlist Cover">
+                    <h3>Workout Beats</h3>
+                    <p>35 Songs</p>
+                </div>
+                <div class="playlist">
+                    <img src="/static/images/3/f2.jpg" alt="Playlist Cover">
+                    <h3>Indie Gems</h3>
+                    <p>42 Songs</p>
+                </div>
+                <div class="playlist">
+                    <img src="/static/images/2/d2.jpg" alt="Playlist Cover">
+                    <h3>Focus and Study</h3>
+                    <p>60 Songs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 BeatHaven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/static/p_script.js"></script>
+</body>
 </html>

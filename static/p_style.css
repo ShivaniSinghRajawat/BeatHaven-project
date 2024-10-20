@@ -1,0 +1,162 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Profile Header */
+.profile-header {
+    background-color: #f2f2f2;
+    color: black;
+    padding: 40px 0;
+}
+
+.profile-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-details {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.profile-name {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.profile-bio {
+    margin: 10px 0;
+    font-size: 16px;
+    color: charcoal-grey;
+}
+
+.profile-actions {
+    margin-top: 20px;
+}
+
+.edit-btn, .logout-btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #444;
+    color: #fff;
+    
+    border-radius: 20px;
+}
+
+
+.logout-btn {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+}
+
+/* Favorite Genres */
+.favorite-genres {
+    padding: 40px 0;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.favorite-genres h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.favorite-genres ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.favorite-genres ul li {
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+/* Playlists */
+.playlists {
+    padding: 40px 0;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.playlists h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.playlist {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.playlist img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.playlist h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.playlist p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: #f2f2f2;
+    color: black;
+    text-align: center;
+    padding: 0;
+    margin-top: 20px;
+}
+   
+    
+
+
+

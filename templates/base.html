@@ -36,7 +36,8 @@
                       </button>
                     <ul class="nav flex-column"  style="margin-top: -60%;
                                                          margin-left: -5%;
-                                                         font-size: 18px;">    
+                                                         font-size: 18px;
+                                                         ">    
                         <li class="nav-item">
                             <a class="nav-link" href="/">
                                 <i class="fas fa-home"></i> About us
@@ -48,7 +49,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="#playlist">
                                 <i class="fas fa-book"></i> Your Library
                             </a>
                         </li>
@@ -74,7 +75,7 @@
             <input type="search" class="form-control" placeholder="Search for songs, artists, or albums">
         </form>
         <div class="flex-shrink-0">
-            <a href="https://google.com" class="link-dark text-decoration-none">Contact Us</a>
+            <a href="mailto:enchantia.amazing@gmail.com?subject=Contact%20Us%20through%20E-mail&body=My%20Name%3A%3CYour%20Name%3E%0D%0AMy%20Question%3A%3CYour%20Question%20Here%3E" class="link-dark text-decoration-none" type="button">Contact Us</a>
         </div>
     </div>
 </header>
@@ -121,7 +122,13 @@
 </div>
 
 <div class="container-fluid">
+
+
+
     <!-- Recently Played Section -->
+
+
+
     <section class="mb-4">
         <h2 class="mb-3">Recently Played</h2>
         <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-4 carousel slide mb-4" id="recentlyPlayedCarousel" data-bs-ride="carousel"">
@@ -139,8 +146,13 @@
         </div>
     </section>
 
+    
+
     <!-- Your Playlists Section -->
-    <section class="mb-4">
+
+
+
+    <section class="mb-4" id="playlist">
         <h2 class="mb-3">Your Playlists</h2>
         <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-4">
             {% for playlist in playlists %}
